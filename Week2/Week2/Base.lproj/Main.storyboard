@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cbt-zB-aWH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GoT Name Creator-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="GoT Name Creator" id="BYZ-38-t0r" customClass="ViewController" customModule="Week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCh-4S-UzK">
+                                <rect key="frame" x="16" y="80" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbm-dv-2hp">
+                                <rect key="frame" x="16" y="163" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2X-fF-VO1">
+                                <rect key="frame" x="16" y="246" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vO-bo-7r6">
+                                <rect key="frame" x="16" y="200" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="d3N-YQ-fee">
+                                <rect key="frame" x="16" y="283" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Lannister"/>
+                                    <segment title="Tully"/>
+                                    <segment title="Tyrell"/>
+                                    <segment title="Stark"/>
+                                    <segment title="Baratheon"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F25-4y-qdK">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <state key="normal" title="Genreal House Details"/>
+                                <connections>
+                                    <segue destination="qc9-1U-Me7" kind="show" identifier="createHouseSegue" id="yGc-O8-dEV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cIg-vk-nDZ">
+                                <rect key="frame" x="16" y="117" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4vO-bo-7r6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4bZ-cF-V6X"/>
+                            <constraint firstItem="D2X-fF-VO1" firstAttribute="top" secondItem="4vO-bo-7r6" secondAttribute="bottom" constant="16" id="63F-7I-ex5"/>
+                            <constraint firstItem="zCh-4S-UzK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7I4-DW-OhG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F25-4y-qdK" secondAttribute="bottom" constant="16" id="Iz4-Ba-1Se"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F25-4y-qdK" secondAttribute="trailing" constant="16" id="K9v-zE-H5r"/>
+                            <constraint firstItem="cIg-vk-nDZ" firstAttribute="top" secondItem="zCh-4S-UzK" secondAttribute="bottom" constant="16" id="KYp-EU-Aj7"/>
+                            <constraint firstItem="Kbm-dv-2hp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="R6x-Uf-CJ1"/>
+                            <constraint firstItem="D2X-fF-VO1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="btt-MV-FKv"/>
+                            <constraint firstItem="Kbm-dv-2hp" firstAttribute="top" secondItem="cIg-vk-nDZ" secondAttribute="bottom" constant="16" id="dDD-79-4qa"/>
+                            <constraint firstItem="4vO-bo-7r6" firstAttribute="top" secondItem="Kbm-dv-2hp" secondAttribute="bottom" constant="16" id="fVe-r1-Dwx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d3N-YQ-fee" secondAttribute="trailing" constant="16" id="kgt-Wh-kC3"/>
+                            <constraint firstItem="d3N-YQ-fee" firstAttribute="top" secondItem="D2X-fF-VO1" secondAttribute="bottom" constant="16" id="lqS-JN-ddd"/>
+                            <constraint firstItem="F25-4y-qdK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pw9-qa-TJR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cIg-vk-nDZ" secondAttribute="trailing" constant="16" id="tCn-NS-VAx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4vO-bo-7r6" secondAttribute="trailing" constant="16" id="txG-HA-0AM"/>
+                            <constraint firstItem="d3N-YQ-fee" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="u4U-m1-BnY"/>
+                            <constraint firstItem="zCh-4S-UzK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="v21-Gm-JMj"/>
+                            <constraint firstItem="cIg-vk-nDZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wmP-J5-IhY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GoT App" id="GYu-OY-Dkn"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="4vO-bo-7r6" id="MBA-xd-hU7"/>
+                        <outlet property="houseSegmentedControl" destination="d3N-YQ-fee" id="hMM-kz-W2G"/>
+                        <outlet property="nameTextField" destination="cIg-vk-nDZ" id="bfU-rI-4ng"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="133"/>
+        </scene>
+        <!--Home Details-->
+        <scene sceneID="qT6-01-AAX">
+            <objects>
+                <viewController id="qc9-1U-Me7" customClass="HouseViewController" customModule="Week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sge-OK-LJK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObC-Nw-BYr">
+                                <rect key="frame" x="16" y="80" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxX-0S-QmJ">
+                                <rect key="frame" x="16" y="117" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FY8-Yy-YGk">
+                                <rect key="frame" x="16" y="154" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FY8-Yy-YGk" firstAttribute="top" secondItem="MxX-0S-QmJ" secondAttribute="bottom" constant="16" id="7WE-cC-bB9"/>
+                            <constraint firstItem="MxX-0S-QmJ" firstAttribute="top" secondItem="ObC-Nw-BYr" secondAttribute="bottom" constant="16" id="Ft5-zS-HYg"/>
+                            <constraint firstItem="FY8-Yy-YGk" firstAttribute="leading" secondItem="96F-em-qPD" secondAttribute="leading" constant="16" id="G9k-3g-37e"/>
+                            <constraint firstItem="ObC-Nw-BYr" firstAttribute="leading" secondItem="96F-em-qPD" secondAttribute="leading" constant="16" id="Obh-IP-OHX"/>
+                            <constraint firstItem="MxX-0S-QmJ" firstAttribute="leading" secondItem="96F-em-qPD" secondAttribute="leading" constant="16" id="Yzj-Ws-hoe"/>
+                            <constraint firstItem="ObC-Nw-BYr" firstAttribute="top" secondItem="96F-em-qPD" secondAttribute="top" constant="16" id="qky-1C-DCA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="96F-em-qPD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home Details" id="7PG-PC-nQ5"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="MxX-0S-QmJ" id="vfR-8u-g92"/>
+                        <outlet property="houseLabel" destination="FY8-Yy-YGk" id="6G3-Ze-2n0"/>
+                        <outlet property="nameLabel" destination="ObC-Nw-BYr" id="hdE-qf-9bw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dJ-ku-9et" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yP6-Vt-Ebz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cbt-zB-aWH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4nc-tt-dLR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GNZ-zD-Mh3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jVQ-Lu-Zcq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="133"/>
+        </scene>
+    </scenes>
+</document>
