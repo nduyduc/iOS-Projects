@@ -10,18 +10,19 @@ import UIKit
 
 class Task: NSObject {
     
-    var taskTitle: String
+    var title: String
     var taskDescription: String
     var dueDate: NSDate?
     var hasBeenCompleted: Bool = false
     
-    init(taskTitle: String, taskDescription: String) {
-        self.taskTitle = taskTitle
+    init(title: String, taskDescription: String, dueDate: NSDate? = nil) {
+        self.title = title
         self.taskDescription = taskDescription
+        self.dueDate = dueDate
     }
     
     func getTaskSummary() -> String {
-        var taskSummary: String = "Task Title is \(self.taskTitle). \(self.taskDescription)."
+        var taskSummary: String = "Task Title is \(self.title). \(self.taskDescription)."
         if let dueDate: NSDate = self.dueDate {
             taskSummary += "The task is due on \(dueDate.description)."
         }
